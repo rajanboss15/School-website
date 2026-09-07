@@ -1,0 +1,440 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Shree Siddhartha Memorial Academy</title><style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f8fc;
+    color:#172033;
+}
+
+/* NAVBAR */
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#062b5c;
+    padding:15px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.2);
+}
+
+.logo{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#ffd43b;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#ffd43b;
+}
+
+/* HERO */
+.hero{
+    min-height:88vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:30px 20px;
+
+    background:
+    linear-gradient(rgba(3,28,62,.82),rgba(3,28,62,.82)),
+    url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:900px;
+    animation:fadeUp 1.2s ease;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:18px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:30px;
+    background:#ffd43b;
+    color:#062b5c;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+/* SECTIONS */
+section{
+    padding:80px 8%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title h2{
+    color:#062b5c;
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.title p{
+    color:#667085;
+}
+
+/* ABOUT */
+.about{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+}
+
+/* PRINCIPAL */
+.principal{
+    background:white;
+}
+
+.principal-box{
+    max-width:800px;
+    margin:auto;
+    background:#f1f6ff;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.principal-icon{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.principal-box h3{
+    color:#062b5c;
+    font-size:27px;
+}
+
+/* FACILITIES */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:white;
+    padding:30px 20px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 6px 25px rgba(0,0,0,.07);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card .icon{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    color:#062b5c;
+    margin-bottom:10px;
+}
+
+/* EDUCATION */
+.education{
+    background:#062b5c;
+    color:white;
+}
+
+.education .title h2{
+    color:white;
+}
+
+.education .title p{
+    color:#dbe7f7;
+}
+
+.level{
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.level span{
+    background:white;
+    color:#062b5c;
+    padding:13px 20px;
+    border-radius:25px;
+    font-weight:bold;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.03);
+}
+
+/* NOTICE */
+.notice-box{
+    max-width:850px;
+    margin:auto;
+}
+
+.notice{
+    background:white;
+    margin-bottom:15px;
+    padding:20px;
+    border-left:5px solid #ffd43b;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,.06);
+}
+
+.notice h3{
+    color:#062b5c;
+    margin-bottom:5px;
+}
+
+/* CONTACT */
+.contact{
+    background:#eaf2fc;
+    text-align:center;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    line-height:2;
+    font-size:17px;
+}
+
+.contact-box strong{
+    color:#062b5c;
+}
+
+/* FOOTER */
+footer{
+    background:#031d3d;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+footer span{
+    color:#ffd43b;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    nav{
+        flex-direction:column;
+        gap:12px;
+    }
+
+    nav ul{
+        gap:12px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    section{
+        padding:60px 6%;
+    }
+
+    .title h2{
+        font-size:30px;
+    }
+}
+</style></head><body><!-- NAVIGATION --><nav><div class="logo">
+SSMA <span>●</span>
+</div><ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#principal">Principal</a></li>
+<li><a href="#facilities">Facilities</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></nav><!-- HOME --><section class="hero" id="home"><div class="hero-content"><h1>Shree Siddhartha Memorial Academy</h1><p>
+Nurturing Knowledge • Character • Creativity
+</p><p>
+Sainamaina-8, Ramapur, Rupandehi, Nepal
+</p><a href="#about" class="btn">
+Explore Our School
+</a></div></section><!-- ABOUT --><section id="about"><div class="title">
+<h2>About Our School</h2>
+<p>A place where learning meets opportunity.</p>
+</div><div class="about"><p>
+Shree Siddhartha Memorial Academy (H.S.) is a private
+educational institution located in Sainamaina-8, Ramapur,
+Rupandehi, Nepal. The school provides education from
+Nursery to Grade 10 and focuses on academic learning,
+discipline, creativity, skills and the overall development
+of students.
+</p><br><p>
+Our goal is to provide students with a supportive learning
+environment where they can develop knowledge, confidence,
+responsibility and a positive attitude toward their future.
+</p></div></section><!-- PRINCIPAL --><section class="principal" id="principal"><div class="title">
+<h2>School Leadership</h2>
+<p>Leading the school toward better learning and development.</p>
+</div><div class="principal-box"><div class="principal-icon">👨‍🏫</div><h3>Bhojraj Paudel</h3><p>
+Principal
+</p></div></section><!-- FACILITIES --><section id="facilities"><div class="title">
+<h2>Our Facilities</h2>
+<p>Supporting students inside and outside the classroom.</p>
+</div><div class="cards"><div class="card">
+<div class="icon">💻</div>
+<h3>Computer Lab</h3>
+<p>Technology-supported learning for modern education.</p>
+</div><div class="card">
+<div class="icon">📚</div>
+<h3>Library</h3>
+<p>A space for reading, learning and discovering knowledge.</p>
+</div><div class="card">
+<div class="icon">🔬</div>
+<h3>Science Learning</h3>
+<p>Encouraging practical and scientific learning.</p>
+</div><div class="card">
+<div class="icon">⚽</div>
+<h3>Sports</h3>
+<p>Encouraging physical activity, teamwork and sportsmanship.</p>
+</div><div class="card">
+<div class="icon">🎨</div>
+<h3>Creative Activities</h3>
+<p>Opportunities for students to express their creativity.</p>
+</div><div class="card">
+<div class="icon">🏫</div>
+<h3>Learning Environment</h3>
+<p>A supportive environment for students' overall development.</p>
+</div></div></section><!-- EDUCATION --><section class="education"><div class="title">
+<h2>Education From Nursery to Grade 10</h2>
+<p>Building strong foundations for lifelong learning.</p>
+</div><div class="level"><span>Nursery</span>
+<span>LKG</span>
+<span>UKG</span>
+<span>Grade 1</span>
+<span>Grade 2</span>
+<span>Grade 3</span>
+<span>Grade 4</span>
+<span>Grade 5</span>
+<span>Grade 6</span>
+<span>Grade 7</span>
+<span>Grade 8</span>
+<span>Grade 9</span>
+<span>Grade 10</span>
+
+</div></section><!-- GALLERY --><section id="gallery"><div class="title"><h2>School Gallery</h2><p>
+A glimpse of our learning environment.
+</p></div><div class="gallery"><img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=900&q=80" alt="School building"><img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=900&q=80" alt="Classroom"><img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=900&q=80" alt="Students learning"><img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=900&q=80" alt="Sports"></div></section><!-- NOTICES --><section><div class="title"><h2>School Updates</h2><p>Important information and activities.</p></div><div class="notice-box"><div class="notice">
+<h3>📢 School Activities</h3>
+<p>
+Students are encouraged to participate in academic,
+creative and extracurricular activities.
+</p>
+</div><div class="notice">
+<h3>🏆 Student Development</h3>
+<p>
+The school focuses on developing students' knowledge,
+skills, discipline and confidence.
+</p>
+</div><div class="notice">
+<h3>📚 Learning by Doing</h3>
+<p>
+Practical learning activities help students connect
+classroom knowledge with real-life experiences.
+</p>
+</div></div></section><!-- CONTACT --><section class="contact" id="contact"><div class="title"><h2>Contact & Location</h2></div><div class="contact-box"><p>
+<strong>Shree Siddhartha Memorial Academy (H.S.)</strong>
+</p><p>
+📍 Sainamaina-8, Ramapur, Rupandehi, Nepal
+</p><p>
+🎓 Private School • Nursery to Grade 10
+</p></div></section><!-- FOOTER --><footer><p>
+© 2026 <span>Shree Siddhartha Memorial Academy</span>
+</p><p>
+Sainamaina-8, Ramapur, Rupandehi, Nepal
+</p></footer></body>
+</html>
