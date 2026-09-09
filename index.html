@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shree Siddhartha Memorial Academy</title>
+
+<title>Shree Siddhartha Memorial Academy | Ramapur</title>
 
 <style>
 *{
@@ -13,250 +14,382 @@
     scroll-behavior:smooth;
 }
 
+:root{
+    --dark:#07111f;
+    --blue:#0879c9;
+    --cyan:#56d9ff;
+    --light:#f5f8fc;
+    --text:#172235;
+    --muted:#68758a;
+    --white:#ffffff;
+}
+
 body{
     font-family:Arial,Helvetica,sans-serif;
-    background:#f5f7fb;
-    color:#172033;
+    background:var(--light);
+    color:var(--text);
     line-height:1.6;
 }
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+section{
+    padding:95px 7%;
+}
+
+.container{
+    max-width:1150px;
+    margin:auto;
+}
+
+/* NAVIGATION */
 
 nav{
     position:fixed;
     top:0;
+    left:0;
     width:100%;
-    z-index:1000;
-    background:rgba(10,20,40,.88);
-    backdrop-filter:blur(14px);
-    padding:15px 6%;
+    z-index:9999;
+    padding:16px 6%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    box-shadow:0 5px 25px rgba(0,0,0,.15);
+    background:rgba(4,14,29,.82);
+    backdrop-filter:blur(16px);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
     color:white;
-    font-weight:800;
-    font-size:18px;
+    font-weight:900;
+    letter-spacing:.8px;
+    font-size:17px;
 }
 
 nav ul{
     display:flex;
-    gap:22px;
     list-style:none;
+    gap:23px;
 }
 
 nav a{
-    color:white;
+    color:#fff;
     text-decoration:none;
-    font-size:14px;
-    font-weight:600;
+    font-size:13px;
+    font-weight:700;
     transition:.3s;
 }
 
 nav a:hover{
-    color:#62d5ff;
+    color:var(--cyan);
 }
+
+/* HERO */
 
 .hero{
     min-height:100vh;
-    background:
-      linear-gradient(rgba(5,15,35,.62),rgba(5,15,35,.78)),
-      url("school.jpg") center/cover;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
     color:white;
-    padding:100px 20px 50px;
+    padding:130px 20px 70px;
+
+    background:
+        linear-gradient(
+            rgba(3,12,28,.58),
+            rgba(3,12,28,.82)
+        ),
+        url("school.jpg") center/cover no-repeat;
 }
 
 .hero-content{
-    max-width:900px;
-    animation:fadeUp 1.2s ease;
+    max-width:950px;
+    animation:heroIn 1.2s ease;
 }
 
-.hero small{
-    letter-spacing:4px;
-    font-weight:bold;
-    color:#8fe5ff;
+.hero-label{
+    color:var(--cyan);
+    font-size:13px;
+    letter-spacing:5px;
+    font-weight:800;
 }
 
 .hero h1{
-    font-size:clamp(38px,7vw,78px);
-    line-height:1.05;
+    font-size:clamp(40px,7vw,82px);
+    line-height:1.02;
     margin:20px 0;
-    font-weight:900;
+    font-weight:950;
+    letter-spacing:-2px;
 }
 
 .hero p{
-    font-size:20px;
-    opacity:.92;
+    font-size:18px;
+    color:#e4edf8;
 }
 
 .motto{
-    margin-top:25px;
+    margin-top:15px;
     font-style:italic;
+    color:#aeeaff!important;
 }
 
 .btn{
     display:inline-block;
-    margin-top:30px;
-    padding:13px 27px;
-    border-radius:30px;
+    margin-top:32px;
+    padding:14px 28px;
+    border-radius:50px;
     background:white;
-    color:#10213f;
+    color:#071a30;
     text-decoration:none;
-    font-weight:800;
+    font-weight:900;
     transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
 }
 
-section{
-    padding:90px 7%;
-}
+/* SECTION TITLES */
 
 .section-title{
     text-align:center;
-    margin-bottom:45px;
+    margin-bottom:48px;
 }
 
 .section-title span{
-    color:#1678c8;
-    font-size:13px;
-    letter-spacing:3px;
-    font-weight:800;
+    color:var(--blue);
+    font-size:12px;
+    letter-spacing:4px;
+    font-weight:900;
 }
 
 .section-title h2{
-    font-size:38px;
+    font-size:clamp(30px,5vw,44px);
     margin-top:8px;
 }
 
+/* ABOUT */
+
 .about{
-    max-width:1000px;
+    max-width:900px;
     margin:auto;
     text-align:center;
     font-size:18px;
+    color:var(--muted);
 }
 
+/* STATS */
+
 .stats{
+    max-width:1100px;
+    margin:50px auto 0;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:18px;
-    margin-top:45px;
 }
 
 .stat{
     background:white;
-    padding:30px 15px;
-    border-radius:18px;
+    padding:28px 15px;
     text-align:center;
-    box-shadow:0 10px 30px rgba(20,40,80,.08);
-    transition:.3s;
+    border-radius:20px;
+    box-shadow:0 12px 35px rgba(20,40,80,.08);
+    transition:.35s;
 }
 
 .stat:hover{
-    transform:translateY(-7px);
+    transform:translateY(-8px);
 }
 
 .stat h3{
-    color:#1678c8;
-    font-size:29px;
+    color:var(--blue);
+    font-size:28px;
 }
 
 .stat p{
-    font-weight:600;
-    margin-top:5px;
+    color:var(--muted);
+    font-weight:700;
+    font-size:14px;
 }
 
-.featured{
-    background:linear-gradient(135deg,#091426,#102c50);
+/* PRINCIPAL SPOTLIGHT */
+
+.principal-section{
+    background:
+        radial-gradient(circle at 10% 20%,rgba(42,155,255,.14),transparent 35%),
+        linear-gradient(135deg,#06101e,#102b4b);
     color:white;
 }
 
-.ajay-card{
-    max-width:1000px;
+.principal-card{
+    max-width:1050px;
     margin:auto;
     display:grid;
-    grid-template-columns:380px 1fr;
-    gap:40px;
+    grid-template-columns:390px 1fr;
+    gap:45px;
     align-items:center;
+    padding:28px;
+    border-radius:28px;
     background:rgba(255,255,255,.07);
-    border:1px solid rgba(255,255,255,.15);
-    padding:25px;
-    border-radius:25px;
-    box-shadow:0 20px 60px rgba(0,0,0,.25);
+    border:1px solid rgba(255,255,255,.13);
+    box-shadow:0 25px 70px rgba(0,0,0,.28);
+}
+
+.principal-card img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.spotlight-label{
+    display:inline-block;
+    padding:7px 14px;
+    border-radius:50px;
+    background:rgba(86,217,255,.12);
+    color:var(--cyan);
+    border:1px solid rgba(86,217,255,.3);
+    font-size:11px;
+    letter-spacing:2px;
+    font-weight:900;
+}
+
+.principal-card h3{
+    font-size:clamp(34px,5vw,55px);
+    margin:15px 0 3px;
+}
+
+.position{
+    color:var(--cyan);
+    font-weight:800;
+    font-size:17px;
+}
+
+.principal-card p{
+    margin-top:20px;
+    color:#d0dceb;
+    font-size:16px;
+}
+
+/* AJAY FEATURE */
+
+.ajay-card{
+    max-width:1050px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:390px 1fr;
+    gap:45px;
+    align-items:center;
+    padding:28px;
+    border-radius:28px;
+    background:#fff;
+    box-shadow:0 18px 55px rgba(20,40,80,.12);
+    border:1px solid #e6edf5;
 }
 
 .ajay-card img{
     width:100%;
     height:430px;
     object-fit:cover;
-    border-radius:18px;
+    border-radius:20px;
 }
 
-.ajay-text h3{
-    font-size:40px;
-    margin:10px 0;
+.ajay-card h3{
+    font-size:clamp(34px,5vw,55px);
+    margin:15px 0 3px;
 }
 
-.ajay-text .role{
-    color:#75ddff;
-    font-weight:800;
-    font-size:17px;
+.ajay-card p{
+    color:var(--muted);
+    margin-top:18px;
 }
 
 .subjects{
     display:flex;
     flex-wrap:wrap;
     gap:9px;
-    margin-top:20px;
+    margin-top:22px;
 }
 
 .subjects span{
-    border:1px solid rgba(255,255,255,.25);
-    padding:7px 12px;
-    border-radius:20px;
+    padding:7px 13px;
+    border-radius:50px;
+    background:#eef7fd;
+    color:#126da9;
+    font-size:12px;
+    font-weight:800;
+}
+
+/* LEADERSHIP */
+
+.leadership{
+    max-width:1050px;
+    margin:auto;
+}
+
+.leadership img{
+    width:100%;
+    max-height:520px;
+    object-fit:cover;
+    border-radius:25px;
+    box-shadow:0 18px 50px rgba(0,0,0,.13);
+}
+
+.leaders{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:17px;
+    margin-top:20px;
+}
+
+.leader{
+    background:white;
+    padding:20px;
+    border-radius:17px;
+    text-align:center;
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.leader h3{
+    font-size:17px;
+}
+
+.leader p{
+    color:var(--blue);
+    font-weight:800;
     font-size:13px;
 }
 
-.badge{
-    display:inline-block;
-    padding:7px 14px;
-    border-radius:20px;
-    background:#fff;
-    color:#10213f;
-    font-size:12px;
-    font-weight:900;
-    letter-spacing:1px;
-}
+/* FACULTY */
 
 .cards{
+    max-width:1100px;
+    margin:auto;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:22px;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
 }
 
 .card{
     background:white;
-    border-radius:20px;
+    border-radius:22px;
     overflow:hidden;
-    box-shadow:0 10px 30px rgba(20,40,80,.08);
-    transition:.3s;
+    box-shadow:0 12px 35px rgba(20,40,80,.09);
+    transition:.35s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+    transform:translateY(-9px);
 }
 
 .card img{
     width:100%;
-    height:280px;
+    height:300px;
     object-fit:cover;
 }
 
@@ -265,59 +398,44 @@ section{
 }
 
 .card-body h3{
-    font-size:21px;
+    font-size:19px;
 }
 
-.role-text{
-    color:#1678c8;
-    font-size:14px;
-    font-weight:bold;
+.role{
+    color:var(--blue);
+    font-weight:800;
+    font-size:13px;
 }
 
-.leadership{
-    max-width:1000px;
-    margin:auto;
-}
-
-.leadership img{
-    width:100%;
-    max-height:520px;
-    object-fit:cover;
-    border-radius:22px;
-    box-shadow:0 15px 45px rgba(0,0,0,.15);
-}
-
-.leaders{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-    margin-top:20px;
-}
-
-.leaders div{
-    background:white;
-    padding:18px;
-    border-radius:15px;
-    text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,.06);
-}
+/* ACHIEVEMENTS */
 
 .achievements{
+    max-width:1050px;
+    margin:auto;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
 .achievement{
     background:white;
-    padding:25px;
-    border-radius:18px;
+    padding:27px 18px;
     text-align:center;
-    font-weight:800;
-    box-shadow:0 8px 25px rgba(0,0,0,.07);
+    border-radius:18px;
+    font-weight:900;
+    box-shadow:0 9px 28px rgba(0,0,0,.07);
+    transition:.3s;
 }
 
+.achievement:hover{
+    transform:translateY(-6px);
+}
+
+/* GALLERY */
+
 .gallery{
+    max-width:1100px;
+    margin:auto;
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
@@ -325,106 +443,137 @@ section{
 
 .gallery img{
     width:100%;
-    height:270px;
+    height:290px;
     object-fit:cover;
-    border-radius:18px;
-    transition:.35s;
+    border-radius:20px;
+    transition:.4s;
 }
 
 .gallery img:hover{
     transform:scale(1.025);
 }
 
+/* FACILITIES */
+
 .facilities{
+    max-width:1050px;
+    margin:auto;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:18px;
 }
 
 .facility{
     background:white;
-    padding:25px;
-    border-radius:17px;
-    font-weight:700;
+    padding:27px;
     text-align:center;
+    border-radius:18px;
+    font-weight:800;
     box-shadow:0 8px 25px rgba(0,0,0,.06);
 }
 
+/* DEVELOPER */
+
 .developer{
-    background:#07101e;
-    color:white;
-    text-align:center;
-    padding:110px 20px;
     position:relative;
     overflow:hidden;
+    text-align:center;
+    color:white;
+    padding:120px 20px;
+    background:
+        radial-gradient(circle at 50% 40%,rgba(60,180,255,.14),transparent 32%),
+        #040b15;
 }
 
-.developer:before{
+.developer:before,
+.developer:after{
     content:"";
     position:absolute;
-    width:400px;
-    height:400px;
+    border:1px solid rgba(86,217,255,.12);
     border-radius:50%;
-    border:1px solid rgba(100,220,255,.15);
     left:50%;
     top:50%;
     transform:translate(-50%,-50%);
 }
 
+.developer:before{
+    width:420px;
+    height:420px;
+}
+
+.developer:after{
+    width:620px;
+    height:620px;
+}
+
+.dev-content{
+    position:relative;
+    z-index:2;
+}
+
 .dev-label{
-    color:#70ddff;
+    color:var(--cyan);
     letter-spacing:5px;
-    font-size:13px;
-    font-weight:800;
+    font-size:12px;
+    font-weight:900;
 }
 
 .developer h2{
-    font-size:clamp(42px,8vw,88px);
-    margin:20px 0 5px;
+    font-size:clamp(43px,8vw,92px);
+    line-height:1;
+    margin:22px 0 8px;
     letter-spacing:2px;
-    position:relative;
-}
-
-.dev-title{
-    font-size:16px;
-    letter-spacing:4px;
-    color:#cbd7e8;
-    font-weight:700;
 }
 
 .dev-line{
-    width:80px;
+    width:85px;
     height:2px;
-    background:#70ddff;
-    margin:25px auto;
+    background:var(--cyan);
+    margin:28px auto;
+}
+
+.dev-title{
+    color:#d5dfec;
+    letter-spacing:4px;
+    font-size:15px;
+    font-weight:800;
 }
 
 .dev-quote{
-    color:#9eacbf;
+    margin-top:28px;
+    color:#8797aa;
     font-style:italic;
 }
+
+/* CONTACT */
 
 .contact-box{
     max-width:750px;
     margin:auto;
-    background:white;
-    padding:35px;
-    border-radius:22px;
+    padding:38px;
     text-align:center;
+    background:white;
+    border-radius:23px;
     box-shadow:0 12px 35px rgba(0,0,0,.08);
 }
 
-.contact-box a{
-    color:#1678c8;
-    font-weight:800;
-    text-decoration:none;
+.contact-box p{
+    margin:7px 0;
 }
 
+.contact-box a{
+    color:var(--blue);
+    text-decoration:none;
+    font-weight:900;
+}
+
+/* FOOTER */
+
 footer{
-    background:#030914;
-    color:#91a0b5;
+    background:#020711;
+    color:#8794a7;
     text-align:center;
-    padding:25px;
+    padding:28px 20px;
     font-size:13px;
 }
 
@@ -432,27 +581,32 @@ footer strong{
     color:white;
 }
 
+/* TOP BUTTON */
+
 .top{
     position:fixed;
+    z-index:999;
     right:20px;
     bottom:20px;
-    width:45px;
-    height:45px;
+    width:46px;
+    height:46px;
     border-radius:50%;
-    background:#102c50;
+    background:#09213b;
     color:white;
     display:flex;
     align-items:center;
     justify-content:center;
     text-decoration:none;
-    font-weight:bold;
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    font-size:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
 }
 
-@keyframes fadeUp{
+/* ANIMATION */
+
+@keyframes heroIn{
     from{
         opacity:0;
-        transform:translateY(30px);
+        transform:translateY(35px);
     }
     to{
         opacity:1;
@@ -460,55 +614,87 @@ footer strong{
     }
 }
 
-@media(max-width:800px){
-    nav{
-        padding:14px 4%;
-    }
+/* MOBILE */
+
+@media(max-width:900px){
 
     nav ul{
         display:none;
-    }
-
-    section{
-        padding:70px 5%;
     }
 
     .stats{
         grid-template-columns:repeat(2,1fr);
     }
 
+    .principal-card,
     .ajay-card{
         grid-template-columns:1fr;
     }
 
+    .principal-card img,
     .ajay-card img{
-        height:380px;
+        height:400px;
     }
 
-    .ajay-text h3{
-        font-size:32px;
+    .cards{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .leaders{
         grid-template-columns:1fr;
     }
 
+    .achievements{
+        grid-template-columns:repeat(2,1fr);
+    }
+
     .gallery{
         grid-template-columns:1fr;
     }
 
-    .gallery img{
-        height:250px;
+    .facilities{
+        grid-template-columns:repeat(2,1fr);
     }
 }
 
-@media(max-width:450px){
-    .stats{
-        grid-template-columns:1fr;
+@media(max-width:550px){
+
+    section{
+        padding:70px 5%;
     }
 
     .hero h1{
-        font-size:42px;
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .stats,
+    .cards,
+    .achievements,
+    .facilities{
+        grid-template-columns:1fr;
+    }
+
+    .principal-card,
+    .ajay-card{
+        padding:18px;
+    }
+
+    .principal-card img,
+    .ajay-card img{
+        height:350px;
+    }
+
+    .developer h2{
+        font-size:43px;
+    }
+
+    .dev-title{
+        letter-spacing:2px;
+        font-size:12px;
     }
 }
 </style>
@@ -516,11 +702,15 @@ footer strong{
 
 <body id="top">
 
+<!-- NAVIGATION -->
+
 <nav>
     <div class="logo">SIDDHARTHA ACADEMY</div>
+
     <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#ajay">Star Educator</a></li>
+        <li><a href="#principal">Principal</a></li>
+        <li><a href="#ajay">Ajay Sir</a></li>
         <li><a href="#faculty">Faculty</a></li>
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#gallery">Gallery</a></li>
@@ -528,32 +718,60 @@ footer strong{
     </ul>
 </nav>
 
+
+<!-- HERO -->
+
 <section class="hero">
+
     <div class="hero-content">
-        <small>WELCOME TO</small>
-        <h1>SHREE SIDDHARTHA<br>MEMORIAL ACADEMY</h1>
-        <p>H.S. • Sainamaina-8, Ramapur, Rupandehi, Nepal</p>
-        <p class="motto">“Quality Education is Our Determination.”</p>
-        <a href="#about" class="btn">Explore Our School ↓</a>
+
+        <div class="hero-label">WELCOME TO</div>
+
+        <h1>
+            SHREE SIDDHARTHA<br>
+            MEMORIAL ACADEMY
+        </h1>
+
+        <p>
+            H.S. • Sainamaina-8, Ramapur, Rupandehi, Nepal
+        </p>
+
+        <p class="motto">
+            “Quality Education is Our Determination.”
+        </p>
+
+        <a href="#about" class="btn">
+            Explore Our School ↓
+        </a>
+
     </div>
+
 </section>
 
+
+<!-- ABOUT -->
+
 <section id="about">
+
     <div class="section-title">
-        <span>ABOUT US</span>
+        <span>ABOUT OUR SCHOOL</span>
         <h2>Growing Through Education</h2>
     </div>
 
     <div class="about">
+
         <p>
-            Shree Siddhartha Memorial Academy is a private school located
-            in Sainamaina-8, Ramapur, Rupandehi, Nepal. The school provides
-            education from Nursery to Grade 10 with a focus on quality
-            education, discipline, activities and overall development.
+            Shree Siddhartha Memorial Academy is a private school
+            located in Sainamaina-8, Ramapur, Rupandehi, Nepal.
+            The school provides education from Nursery to Grade 10
+            with a focus on quality education, discipline,
+            activities and the overall development of students.
         </p>
+
     </div>
 
     <div class="stats">
+
         <div class="stat">
             <h3>Nursery–10</h3>
             <p>Classes</p>
@@ -573,30 +791,85 @@ footer strong{
             <h3>Private</h3>
             <p>School</p>
         </div>
+
     </div>
+
 </section>
 
-<section id="ajay" class="featured">
+
+<!-- PRINCIPAL SPOTLIGHT -->
+
+<section id="principal" class="principal-section">
+
     <div class="section-title">
-        <span style="color:#75ddff;">SPECIAL SPOTLIGHT</span>
+        <span style="color:#56d9ff;">LEADERSHIP SPOTLIGHT</span>
+        <h2>Our Principal</h2>
+    </div>
+
+    <div class="principal-card">
+
+        <img
+            src="leadership-1.jpg"
+            alt="School Leadership"
+        >
+
+        <div>
+
+            <span class="spotlight-label">
+                PRINCIPAL • SCHOOL LEADERSHIP
+            </span>
+
+            <h3>Bhojraj Paudyal</h3>
+
+            <div class="position">
+                Principal — Shree Siddhartha Memorial Academy
+            </div>
+
+            <p>
+                Leading the school community with a commitment to
+                education, discipline, student development and
+                continuous progress.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AJAY SIR -->
+
+<section id="ajay">
+
+    <div class="section-title">
+        <span>SPECIAL EDUCATOR SPOTLIGHT</span>
         <h2>Our Star Educator</h2>
     </div>
 
     <div class="ajay-card">
-        <img src="ajay-1.jpg" alt="Ajay Ghimire Sir">
 
-        <div class="ajay-text">
-            <span class="badge">FEATURED TEACHER</span>
+        <img
+            src="ajay-1.jpg"
+            alt="Ajay Ghimire Sir"
+        >
+
+        <div>
+
+            <span class="spotlight-label">
+                FEATURED TEACHER
+            </span>
 
             <h3>Ajay Ghimire Sir</h3>
 
-            <p class="role">
+            <div class="position">
                 Mathematics Teacher • All-Round Educator
-            </p>
+            </div>
 
-            <p style="margin-top:18px;color:#d7e3f2;">
+            <p>
                 A dedicated educator who inspires students through
-                teaching, guidance and knowledge across multiple subjects.
+                teaching, guidance and knowledge across multiple
+                subjects.
             </p>
 
             <div class="subjects">
@@ -606,179 +879,345 @@ footer strong{
                 <span>English</span>
                 <span>Social</span>
             </div>
+
         </div>
+
     </div>
+
 </section>
 
-<section id="leadership">
+
+<!-- LEADERSHIP -->
+
+<section>
+
     <div class="section-title">
-        <span>LEADERSHIP</span>
+        <span>LEADERSHIP TEAM</span>
         <h2>School Leadership</h2>
     </div>
 
     <div class="leadership">
-        <img src="leadership-1.jpg" alt="School Leadership">
+
+        <img
+            src="leadership-1.jpg"
+            alt="School Leadership Team"
+        >
 
         <div class="leaders">
-            <div>
+
+            <div class="leader">
                 <h3>Rajendra Prasad Dhoju</h3>
                 <p>Chairman</p>
             </div>
 
-            <div>
+            <div class="leader">
                 <h3>Bhojraj Paudyal</h3>
                 <p>Principal</p>
             </div>
 
-            <div>
+            <div class="leader">
                 <h3>Om Nepal</h3>
                 <p>Vice Principal</p>
             </div>
+
         </div>
+
     </div>
+
 </section>
 
+
+<!-- FACULTY -->
+
 <section id="faculty">
+
     <div class="section-title">
-        <span>OUR TEAM</span>
+        <span>OUR TEACHERS</span>
         <h2>Dedicated Faculty</h2>
     </div>
 
     <div class="cards">
 
         <div class="card">
+
             <img src="ajay-1.jpg" alt="Ajay Ghimire Sir">
+
             <div class="card-body">
                 <h3>Ajay Ghimire Sir</h3>
-                <p class="role-text">Mathematics • All-Round Educator</p>
+                <p class="role">
+                    Mathematics • All-Round Educator
+                </p>
             </div>
+
         </div>
 
+
         <div class="card">
-            <img src="balkrishna.jpg" alt="Balkrishna Gyawali Sir">
+
+            <img
+                src="balkrishna.jpg"
+                alt="Balkrishna Gyawali Sir"
+            >
+
             <div class="card-body">
                 <h3>Balkrishna Gyawali Sir</h3>
-                <p class="role-text">Computer Teacher</p>
+                <p class="role">
+                    Computer Teacher
+                </p>
             </div>
+
         </div>
 
+
         <div class="card">
+
             <img src="bishnu.jpg" alt="Bishnu Sir">
+
             <div class="card-body">
                 <h3>Bishnu Sir</h3>
-                <p class="role-text">ECA Coordinator • English Teacher</p>
+                <p class="role">
+                    ECA Coordinator • English Teacher
+                </p>
             </div>
+
         </div>
 
+
         <div class="card">
+
             <img src="ghansyam.jpg" alt="Ghansyam Sir">
+
             <div class="card-body">
                 <h3>Ghansyam Sir</h3>
-                <p class="role-text">Mathematics • Optional Mathematics</p>
+                <p class="role">
+                    Mathematics • Optional Mathematics
+                </p>
             </div>
+
         </div>
 
     </div>
+
 </section>
 
+
+<!-- ACHIEVEMENTS -->
+
 <section id="achievements">
+
     <div class="section-title">
         <span>EXCELLENCE</span>
         <h2>Achievements</h2>
     </div>
 
     <div class="achievements">
-        <div class="achievement">🏆 Mayor Cup Runner-Up</div>
-        <div class="achievement">🧠 Quiz Competitions</div>
-        <div class="achievement">🥋 Karate</div>
-        <div class="achievement">🎓 99% SEE Pass Rate</div>
-        <div class="achievement">⚽ Sports</div>
-        <div class="achievement">🎭 Dance & Culture</div>
+
+        <div class="achievement">
+            🏆 Mayor Cup Runner-Up
+        </div>
+
+        <div class="achievement">
+            🧠 Quiz Competitions
+        </div>
+
+        <div class="achievement">
+            🥋 Karate
+        </div>
+
+        <div class="achievement">
+            🎓 99% SEE Pass Rate
+        </div>
+
+        <div class="achievement">
+            ⚽ Sports
+        </div>
+
+        <div class="achievement">
+            🎭 Dance & Culture
+        </div>
+
     </div>
+
 </section>
 
+
+<!-- ACTIVITIES -->
+
 <section>
+
     <div class="section-title">
         <span>STUDENT LIFE</span>
         <h2>Activities & Celebrations</h2>
     </div>
 
     <div class="about">
+
         <p>
-            School life goes beyond classrooms through celebrations,
-            cultural programs, sports and activities that bring the
-            school community together.
+            School life extends beyond the classroom through
+            celebrations, cultural programs, sports and activities
+            that bring students and teachers together.
         </p>
+
     </div>
+
 </section>
 
+
+<!-- GALLERY -->
+
 <section id="gallery">
+
     <div class="section-title">
-        <span>REAL MOMENTS</span>
+        <span>REAL SCHOOL MOMENTS</span>
         <h2>Teacher's Day Celebration</h2>
     </div>
 
     <div class="gallery">
-        <img src="teachers-day-1.jpg" alt="Teacher's Day Celebration">
-        <img src="teachers-day-2.jpg" alt="Teacher's Day Celebration">
-        <img src="teachers-day-3.jpg" alt="Teacher's Day Celebration">
+
+        <img
+            src="teachers-day-1.jpg"
+            alt="Teacher's Day Celebration"
+        >
+
+        <img
+            src="teachers-day-2.jpg"
+            alt="Teacher's Day Celebration"
+        >
+
+        <img
+            src="teachers-day-3.jpg"
+            alt="Teacher's Day Celebration"
+        >
+
     </div>
+
 </section>
 
+
+<!-- FACILITIES -->
+
 <section>
+
     <div class="section-title">
         <span>LEARNING ENVIRONMENT</span>
-        <h2>Facilities</h2>
+        <h2>Facilities & Activities</h2>
     </div>
 
     <div class="facilities">
-        <div class="facility">💻 Computer Learning</div>
-        <div class="facility">📚 Library & Learning</div>
-        <div class="facility">⚽ Sports Activities</div>
-        <div class="facility">🎭 Cultural Activities</div>
-        <div class="facility">🧪 Science Learning</div>
-        <div class="facility">🎓 Quality Education</div>
+
+        <div class="facility">
+            💻 Computer Learning
+        </div>
+
+        <div class="facility">
+            📚 Learning Resources
+        </div>
+
+        <div class="facility">
+            ⚽ Sports Activities
+        </div>
+
+        <div class="facility">
+            🎭 Cultural Activities
+        </div>
+
+        <div class="facility">
+            🧪 Science Learning
+        </div>
+
+        <div class="facility">
+            🎓 Quality Education
+        </div>
+
     </div>
+
 </section>
 
+
+<!-- CONTACT -->
+
 <section id="contact">
+
     <div class="section-title">
         <span>GET IN TOUCH</span>
         <h2>Contact School</h2>
     </div>
 
     <div class="contact-box">
-        <p><strong>Shree Siddhartha Memorial Academy (H.S.)</strong></p>
-        <p>Sainamaina-8, Ramapur, Rupandehi, Nepal</p>
+
+        <p>
+            <strong>
+                Shree Siddhartha Memorial Academy (H.S.)
+            </strong>
+        </p>
+
+        <p>
+            Sainamaina-8, Ramapur, Rupandehi, Nepal
+        </p>
 
         <br>
 
-        <p>School: <a href="tel:071440154">071-440154</a></p>
-        <p>Principal: <a href="tel:9847048086">984-7048086</a></p>
+        <p>
+            School:
+            <a href="tel:071440154">
+                071-440154
+            </a>
+        </p>
+
+        <p>
+            Principal:
+            <a href="tel:9847048086">
+                984-7048086
+            </a>
+        </p>
+
     </div>
+
 </section>
+
+
+<!-- RAJAN DEVELOPER -->
 
 <section class="developer">
-    <div class="dev-label">WEBSITE DESIGNED & DEVELOPED BY</div>
 
-    <h2>RAJAN BHATTARAI</h2>
+    <div class="dev-content">
 
-    <div class="dev-line"></div>
+        <div class="dev-label">
+            WEBSITE DESIGNED & DEVELOPED BY
+        </div>
 
-    <p class="dev-title">
-        STUDENT • WEB DEVELOPER • PROGRAMMER
-    </p>
+        <h2>RAJAN BHATTARAI</h2>
 
-    <p class="dev-quote" style="margin-top:25px;">
-        “Turning ideas into digital experiences.”
-    </p>
+        <div class="dev-line"></div>
+
+        <div class="dev-title">
+            STUDENT • WEB DEVELOPER • PROGRAMMER
+        </div>
+
+        <div class="dev-quote">
+            “Turning ideas into digital experiences.”
+        </div>
+
+    </div>
+
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
+
     © 2026 Shree Siddhartha Memorial Academy.
+
     <br>
-    Website Designed & Developed by <strong>Rajan Bhattarai</strong>
+
+    Website Designed & Developed by
+    <strong>Rajan Bhattarai</strong>
+
 </footer>
+
+
+<!-- BACK TO TOP -->
 
 <a href="#top" class="top">↑</a>
 
